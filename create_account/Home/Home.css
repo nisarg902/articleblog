@@ -1,0 +1,46 @@
+ .nav-bar{
+        display: flex;
+        justify-content: space-around;
+    }
+    header{
+            margin: 10px;
+    }
+    .article-img{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+    .tech-img{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+       gap: 10px;
+       margin:auto;
+       
+    }
+       #readmore{
+        color: white;
+    background: black;
+    border-radius: 6px;
+    font-size: small;
+    padding: 5px;
+
+       }
+
+       #loadmorearticle,#l{
+        margin-left: 36%;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    width: 24%;
+    padding: 7px;
+       }
+       .ok{
+        margin-top: 25px;
+       }
+       .footer-nav{
+        display: flex;
+        justify-content: space-around;
+       }

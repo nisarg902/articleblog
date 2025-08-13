@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create_account</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="create_account.css">
+</head>
+<!-- 
+// function savename(){
+//          var storename  = document.getElementById("name").value.trim();
+//          var storeemail = document.getElementById("email").value.trim();
+//          var storepassword = document.getElementById("password").value.trim();
+//          var storeconfirmpassword = document.getElementById("confirmpassword").value.trim();
+
+//          if(storename){
+//             localStorage.setItem("name",storename);
+//             alert("name saved:"+storename)
+//          }else{
+//             alert("please enter name");
+//          }
+
+//          if(storeemail){
+//             localStorage.setItem("email",storeemail);
+//             alert("email saved",+ storeemail)
+//          }else{
+//             alert("please enter email");
+//          }
+//          if(storepassword){
+//             localStorage.setItem("password",storepassword);
+//             alert("password save:",+storepassword);
+//          }else{
+//             alert("please enter password");
+//          }
+//          if(storeconfirmpassword){
+//             localStorage.setItem("confirmpassword",storeconfirmpassword);
+//             alert("confirmpassword save:",+storeconfirmpassword);
+//          }else{
+//             alert("please enter confirmpassword");
+//          }
+          -->
+<!-- //    } -->
+
+<div class="container">
+  
+  <div>  <img src="article1.png" width="100%"></img></div>
+         <div style="margin: 39px 0 0 -87px;">
+             <form id="Registration_form">
+                  <h2>Create AN  account</h2>
+                           <p> Lets start a journey to graet artcile</p>
+                           <input type="text"  class="input" placeholder="name" id="name" name="name" onblur="verifyname()" required>
+                           <input type="email" class="input" placeholder="Email Address" id="email" onblur="verifyuserEmail()" required>
+                           <input type="password" class="input" placeholder="password" id="password" onblur="verifypassword()" required>
+                           <input type="password" class="input" placeholder="confirmpassword" id="confirmpassword" onblur="checkpassword()" required>
+
+                           <div id="userError"></div>
+                           <div id="msg" ></div>
+
+                              
+                             <button type="submit"  id="create";>regsiter</button>
+                             <a href="log_in.html">log_in</a>
+
+                             <br><br>
+                         <button id="sign_in" class="bi bi-google">sign in with google</button>
+             </form>
+                         
+    </div>
+   
+    <script>
+     document.getElementById("Registration_form").addEventListener("submit",function(event){
+      event.preventDefault();
+      var name=document.getElementById("name").value;
+      var email=document.getElementById("email").value;
+      var password=document.getElementById("password").value;
+      var confirmpassword=document.getElementById("confirmpassword").value;
+   if(password!==confirmpassword){
+      alert("not mtch");
+      returnp9
+   }
+
+   const user ={
+      name: name,
+      email :email,
+      password: password
+
+   };
+
+
+   localStorage.setItem("registeredUser",JSON.stringify(user) )
+   alert("registration successfull please login");
+
+   window.location.href="log_in.html";
+
+     });
+</script>
+</body>
+
+ 
+</html>
+ <!-- // function checkpasssword(){
+        //     var confirm=document.getElementById("checkpassword").value;
+        //     var password =document.getElementById("password").value;
+        //     var msg =document.getElementById("msg");
+        //     if(passsword!==confirm){
+        //         msg.textContent="not match";
+        //         return false;
+        //     }else{
+        //         msg.textContent="";
+        //         alert("password match!");
+        //         return true;
+        //     } }

@@ -9,7 +9,7 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 10px;
-        max-width: 1200px;
+        max-width:900;
         margin: auto;
         padding: 20px;
     }
@@ -17,7 +17,9 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
        gap: 10px;
+       max-width:900;
        margin:auto;
+
        
     }
        #readmore{
@@ -44,3 +46,14 @@
         display: flex;
         justify-content: space-around;
        }
+  span{
+         padding: 5px;
+     }
+     nav{
+          position: relative;
+          width: 100%;
+          padding: 10px;
+     }
+     a{
+          text-decoration: none;
+     }

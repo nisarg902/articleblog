@@ -30,6 +30,10 @@
           color: black;
           background-color: white;
      }
+       #sign_in:hover{
+         color: rgb(45, 16, 163);
+
+      }
      input{
           display: block;
      }

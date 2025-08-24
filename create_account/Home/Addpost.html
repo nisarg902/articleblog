@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Test</title>
+  <style>
+    #userArticles > div {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 10px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="handlePost(event)">
+    <input id="title" placeholder="title"><br>
+    <input id="imgUrl" placeholder="image url"><br>
+    <textarea id="content" placeholder="content"></textarea><br>
+    <button type="submit">Post</button>
+  </form>
+
+  <script>
+    function handlePost(event) {
+      event.preventDefault();
+
+      const title = document.getElementById('title').value.trim();
+      const imgUrl = document.getElementById('imgUrl').value.trim();
+      const content = document.getElementById('content').value.trim();
+
+      const newArticle = { title, imgUrl, content, time: new Date().toLocaleString() };
+
+      // Get old articles or empty array
+      const articles = JSON.parse(localStorage.getItem("articles")) || [];
+
+      articles.unshift(newArticle); // add to front
+
+      localStorage.setItem("articles", JSON.stringify(articles));
+
+      window.location.href = "Home.html";
+    }
+  </script>
+</body>
+</html>

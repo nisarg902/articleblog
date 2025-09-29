@@ -47,23 +47,26 @@
 
 <div class="container">
   
-  <div>  <img src="article1.png" width="100%"></img></div>
-         <div style=" margin-left: -263px; margin-top: 5%; font-size: 17px;">
+<div>
+       <img src="article1.png" width="100%"></img>
+
+</div>        
+ <div style=" margin-left: -263px; margin-top: 5%; font-size: 17px;">
    
    
              <form id="Registration_form">
-                  <h2>Create AN  account</h2>
-                           <p> Lets start a journey to graet artcile</p>
-                           <input type="text"  class="input" placeholder="name" id="name" name="name" onblur="verifyname()" required>
+                  <h2>Create AN  Account</h2>
+                           <p> Lets start a journey to Great article</p>
+                           <input type="text"  class="input" placeholder="Enter your name" id="name" name="name" onblur="verifyname()" required>
                            <input type="email" class="input" placeholder="Email Address" id="email" onblur="verifyuserEmail()" required>
-                           <input type="password" class="input" placeholder="password" id="password" onblur="verifypassword()" required>
-                           <input type="password" class="input" placeholder="confirmpassword" id="confirmpassword" onblur="checkpassword()" required>
+                           <input type="password" class="input" placeholder="Password" id="Password" onblur="verifypassword()" required>
+                           <input type="password" class="input" placeholder="confirm Password" id="confirmpassword" onblur="checkpassword()" required>
 
                            <div id="userError"></div>
                            <div id="msg" ></div>
 
                               
-                             <button type="submit"  id="create";>regsiter</button>
+                             <button type="submit"  id="create";>Regsiter</button>
                              <a href="../Log_in/log_in.html">log_in</a>
 
                              <br><br>
@@ -80,14 +83,15 @@
       var password=document.getElementById("password").value;
       var confirmpassword=document.getElementById("confirmpassword").value;
    if(password!==confirmpassword){
-      alert("not mtch");
+      alert("not match");
       return
    }
 
    const user ={
       name: name,
       email :email,
-      password: password
+      password: password,
+      confirmpassword:confirmpassword
 
    };
 

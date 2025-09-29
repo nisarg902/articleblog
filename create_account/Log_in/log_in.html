@@ -15,14 +15,14 @@
         <div>
             <img src="login_banner.png" width="100%";  style="max-width: 900px;">
         </div>
-            <div>
+            
                  <form id="log_in" style="margin: 91px ;margin-left: -60px" >
                 
                                <h1>Welcome Back</h1>
 
-                       <p> Welcome Back ,please enter your details</p>
+                       <p> Welcome Back ,Please enter your details</p>
 
-                          <div><button style="width: 100%;  padding: 12px"> <span style="padding: 10px;" class="bi  bi-google"></span>sign in with google</button></div>
+                          <div><button style="width: 100%;  padding: 12px"> <span style="padding: 10px;" class="bi  bi-google"></span>Sign in with google</button></div>
 
 
                          <hr>
@@ -31,14 +31,14 @@
                          <input type="password" id="password"  placeholder="password "required>
                          <a href="">forgot password?</a>
                 
-                         <button type="submit" id="login">login</button>
+                         <button type="submit" id="login">Login</button>
 
 
-                          <p style="margin-left: 82px;">not registerd yet?<a href="../createaccount1/createaccount.html"><b style="font-size: 20px; padding: 10px;">Create an Account</b> </a></p>
+                          <p style="margin-left: 82px;">Not registerd yet?<a href="../createaccount1/createaccount.html"><b style="font-size: 20px; padding: 10px;">Create an Account</b> </a></p>
 
                 </form>
 
-          </div>
+         
       </div>
       <script>
 
@@ -52,22 +52,27 @@ document.getElementById("log_in").addEventListener("submit", function(event){
   var storeduser  =  localStorage.getItem("registeredUser");
 
            if(storeduser){
-              var parsedname  = JSON.parse(storeduser)
+              var parsedname  = JSON.parse(storeduser);
                              
 
-           if(parsedname.email === email && parsedname.password === password){
-          
-            alert("login succesfull");
+           if(parsedname.email === email && parsedname.password === password)
+           
+           {
+                 alert("Login Successful!");
 
-             window.location.href="../Home/Home.html";
+                  window.location.href="../Home/Home.html";
 
              
-                         }else{
-                                     alert("incoreect password");
-                                  }
+          }else{
+                                    
+            
+              alert("Incorrect password");
+                                
+            
+            }
 
                      }else{
-                        alert("no user found");
+                         alert("No user found"); 
                      }
   
 });

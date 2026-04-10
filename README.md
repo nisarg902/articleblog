@@ -19,4 +19,4 @@ articleblog/
 │   ├── Log_in/             # Authentication Views
 │   └── createaccount1/     # Registration Components
 └── README.md               # Project Documentation
-<img width="1855" height="842" alt="Screenshot 2026-04-10 033727" src="https://github.com/user-attachments/assets/131fd2d3-bd0d-43ae-af03-f24fa31ef2f5" />
+<img width="1855" height="842" alt="Screenshot 2026-04-10 033727" src="https://github.com/user-attachments/assets/22eaae0c-a08a-4359-a82a-c6d8d3489d26" />
